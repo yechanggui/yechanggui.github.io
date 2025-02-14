@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Geth | Vincent Blog</title><meta name="keywords" content="WEB3"><meta name="author" content="Vincent"><meta name="copyright" content="Vincent"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="进入console1docker exec -it ethereum_geth-rpc-endpoint_1 geth attach --datadir&#x3D;&amp;#x27;&#x2F;root&#x2F;blockchain_data&amp;#x27;  Overview这是一个交互式的Javascript执行环境，在这里面可以执行Javascript代码，其中&gt;是命令提示符。在这个环境里也内置了一些用来操作以太坊的Jav">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Geth">
+<meta property="og:url" content="http://yechanggui.github.io/2022/07/07/WEB3/Geth/index.html">
+<meta property="og:site_name" content="Vincent Blog">
+<meta property="og:description" content="进入console1docker exec -it ethereum_geth-rpc-endpoint_1 geth attach --datadir&#x3D;&amp;#x27;&#x2F;root&#x2F;blockchain_data&amp;#x27;  Overview这是一个交互式的Javascript执行环境，在这里面可以执行Javascript代码，其中&gt;是命令提示符。在这个环境里也内置了一些用来操作以太坊的Jav">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg">
+<meta property="article:published_time" content="2022-07-07T07:29:00.000Z">
+<meta property="article:modified_time" content="2022-07-07T07:29:00.000Z">
+<meta property="article:author" content="Vincent">
+<meta property="article:tag" content="WEB3">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg"><link rel="shortcut icon" href="https://tva1.sinaimg.cn/large/008i3skNgy1gxvykz98hvj30c70c8jsm.jpg"><link rel="canonical" href="http://yechanggui.github.io/2022/07/07/WEB3/Geth/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Geth',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-07-07 15:29:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxvykz98hvj30c70c8jsm.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">76</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Vincent Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Geth</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-07T07:29:00.000Z" title="发表于 2022-07-07 15:29:00">2022-07-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-07-07T07:29:00.000Z" title="更新于 2022-07-07 15:29:00">2022-07-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">529</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Geth"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="进入console"><a href="#进入console" class="headerlink" title="进入console"></a>进入console</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it ethereum_geth-rpc-endpoint_1 geth attach --datadir=&#x27;/root/blockchain_data&#x27;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>这是一个交互式的Javascript执行环境，在这里面可以执行Javascript代码，其中&gt;是命令提示符。在这个环境里也内置了一些用来操作以太坊的Javascript对象，可以直接使用这些对象。这些对象主要包括：</p>
+<ul>
+<li>  eth：包含一些跟操作区块链相关的方法</li>
+<li>  net：包含以下查看p2p网络状态的方法</li>
+<li>  admin：包含一些与管理节点相关的方法</li>
+<li>  miner：包含启动&amp;停止挖矿的一些方法</li>
+<li>  personal：主要包含一些管理账户的方法</li>
+<li>  txpool：包含一些查看交易内存池的方法</li>
+<li>  web3：包含了以上对象，还包含一些单位换算的方法</li>
+</ul>
+<p>其中常用命令有：</p>
+<ul>
+<li>  personal.newAccount(‘133’)：创建账户；</li>
+<li>  personal.unlockAccount(“0x0c00bd425d74357abc10b69599bb4ce7b203bbe7”, “tiatnain123”)：解锁账户；</li>
+<li>  eth.accounts：枚举系统中的账户；</li>
+<li>  eth.getBalance(“0xbce4f7e52556a32e0b44123749ef8baea65af5b3”)：查看账户余额，返回值的单位是 Wei（Wei - 是以太坊中最小货币面额单位，类似比特币中的聪，1 ether = 10^18 Wei）；</li>
+<li>  eth.blockNumber：列出区块总数；</li>
+<li>  eth.getTransaction()：获取交易；</li>
+<li>  eth.getBlock()：获取区块；</li>
+<li>  miner.start()：开始挖矿；</li>
+<li>  miner.stop()：停止挖矿；</li>
+<li>  web3.fromWei()：Wei 换算成以太币；</li>
+<li>  web3.toWei()：以太币换算成 Wei；</li>
+<li>  txpool.status：交易池中的状态；</li>
+<li>  admin.addPeer()：连接到其他节点；</li>
+</ul>
+<h3 id="交易相关"><a href="#交易相关" class="headerlink" title="交易相关"></a>交易相关</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># 账户解锁</span><br><span class="line">personal.unlockAccount(eth.accounts[0],&#x27;tiatnain123&#x27;, 1230000)</span><br><span class="line">personal.unlockAccount(eth.accounts[0],&#x27;133&#x27;, 1230000)</span><br><span class="line"># 获取账户余额</span><br><span class="line">web3.fromWei(eth.getBalance(eth.accounts[0]),&#x27;ether&#x27;)</span><br><span class="line">web3.fromWei(eth.getBalance(eth.accounts[1]),&#x27;ether&#x27;)</span><br><span class="line"></span><br><span class="line">## 发送交易</span><br><span class="line">amount = web3.toWei(5,&#x27;ether&#x27;)</span><br><span class="line">eth.sendTransaction(&#123;from:eth.accounts[0],to:&quot;0x57e60fafa998fab5ff85ef730e2f83c0a9d64ccc&quot;,value:amount&#125;)</span><br><span class="line">eth.sendTransaction(&#123;from:eth.accounts[0],to:&quot;0xfcf14de24a765787f1e8973e5387ac6869cb0c9a&quot;,value:amount&#125;)</span><br><span class="line"></span><br><span class="line">### 交易回调方式</span><br><span class="line">amount = web3.toWei(100,&#x27;ether&#x27;)</span><br><span class="line">eth.sendTransaction(&#123;from:eth.accounts[0],to:&quot;0x229f6d666b69e157b7f5f86c348276cc35f5b8ea&quot;,value:amount&#125;, function(err, transactionHash) &#123;</span><br><span class="line">  if (!err)</span><br><span class="line">    console.log(transactionHash); </span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">### 获取交易信息</span><br><span class="line"></span><br><span class="line">eth.getTransaction(&quot;0x210ead7e297300ccfc5658d1798ec04050dc8a96333b2c769d062af3156531f6&quot;)</span><br><span class="line">eth.getTransaction(&quot;0x332c0627d917a68cfb03e66c432c98443bfbabc2c3cc263fdf1e27d55842fa73&quot;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="获取交易信息"><a href="#获取交易信息" class="headerlink" title="获取交易信息"></a>获取交易信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 获取区块个数</span><br><span class="line">eth.blockNumber </span><br><span class="line"></span><br><span class="line"># 获取区块信息</span><br><span class="line"></span><br><span class="line">eth.getBlock(180)</span><br><span class="line">eth.getBlock(&#x27;0x54340760e78a769cff2e4abce3a27df5f1e7f95b87f7d026b3901b61759deb2c&#x27;)</span><br><span class="line"></span><br><span class="line"># 获取交易数量</span><br><span class="line">eth.getTransactionCount(eth.accounts[0])</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Vincent</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yechanggui.github.io/2022/07/07/WEB3/Geth/">http://yechanggui.github.io/2022/07/07/WEB3/Geth/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yechanggui.github.io" target="_blank">Vincent Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/WEB3/">WEB3</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/07/07/WEB3/%E7%A7%81%E6%9C%89%E9%93%BE%E5%AE%89%E8%A3%85/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">私有链安装</div></div></a></div><div class="next-post pull-right"><a href="/2022/05/02/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/%E7%88%AC%E8%99%AB/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">爬虫</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/07/07/WEB3/%E7%A7%81%E6%9C%89%E9%93%BE%E5%AE%89%E8%A3%85/" title="私有链安装"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-07</div><div class="title">私有链安装</div></div></a></div><div><a href="/2022/09/04/WEB3/Hardhat/hardhat%E4%BD%BF%E7%94%A8/" title="hardhat使用"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-04</div><div class="title">hardhat使用</div></div></a></div><div><a href="/2022/07/09/WEB3/solidity/solidity/" title="solidity"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-09</div><div class="title">solidity</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxvykz98hvj30c70c8jsm.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Vincent</div><div class="author-info__description">只有坚强起来才能不丧失温柔</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">76</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yechanggui"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/yechanggui" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5console"><span class="toc-number">1.</span> <span class="toc-text">进入console</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Overview"><span class="toc-number">2.</span> <span class="toc-text">Overview</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A4%E6%98%93%E7%9B%B8%E5%85%B3"><span class="toc-number">3.</span> <span class="toc-text">交易相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E4%BA%A4%E6%98%93%E4%BF%A1%E6%81%AF"><span class="toc-number">4.</span> <span class="toc-text">获取交易信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number"></span> <span class="toc-text">Reference</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/02/14/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%A8%A1%E5%9E%8B%E5%8A%A0%E9%80%9F%E4%B8%8B%E8%BD%BD/" title="无题"><img src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/02/14/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%A8%A1%E5%9E%8B%E5%8A%A0%E9%80%9F%E4%B8%8B%E8%BD%BD/" title="无题">无题</a><time datetime="2025-02-14T03:48:52.660Z" title="发表于 2025-02-14 11:48:52">2025-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/14/%E9%87%8F%E5%8C%96/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" title="无题"><img src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/02/14/%E9%87%8F%E5%8C%96/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" title="无题">无题</a><time datetime="2025-02-14T03:48:52.660Z" title="发表于 2025-02-14 11:48:52">2025-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/14/%E6%95%B0%E6%8D%AE%E5%BA%93/Elasticsearch/ES%20%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" title="无题"><img src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/02/14/%E6%95%B0%E6%8D%AE%E5%BA%93/Elasticsearch/ES%20%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" title="无题">无题</a><time datetime="2025-02-14T03:48:52.660Z" title="发表于 2025-02-14 11:48:52">2025-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/14/python/%E6%9C%AA%E5%91%BD%E5%90%8D/" title="无题"><img src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/02/14/python/%E6%9C%AA%E5%91%BD%E5%90%8D/" title="无题">无题</a><time datetime="2025-02-14T03:48:52.659Z" title="发表于 2025-02-14 11:48:52">2025-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/14/python/%E6%9C%AA%E5%91%BD%E5%90%8D%201/" title="无题"><img src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/02/14/python/%E6%9C%AA%E5%91%BD%E5%90%8D%201/" title="无题">无题</a><time datetime="2025-02-14T03:48:52.659Z" title="发表于 2025-02-14 11:48:52">2025-02-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By Vincent</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

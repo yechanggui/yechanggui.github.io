@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>阿里云 oss | Vincent Blog</title><meta name="keywords" content="工作,linux"><meta name="author" content="Vincent"><meta name="copyright" content="Vincent"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="有东西被加密了, 请输入密码查看.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里云 oss">
+<meta property="og:url" content="http://yechanggui.github.io/2023/12/15/linux/%E9%98%BF%E9%87%8C%E4%BA%91%20oss/index.html">
+<meta property="og:site_name" content="Vincent Blog">
+<meta property="og:description" content="有东西被加密了, 请输入密码查看.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg">
+<meta property="article:published_time" content="2023-12-15T10:31:00.000Z">
+<meta property="article:modified_time" content="2023-12-15T10:31:00.000Z">
+<meta property="article:author" content="Vincent">
+<meta property="article:tag" content="工作">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg"><link rel="shortcut icon" href="https://tva1.sinaimg.cn/large/008i3skNgy1gxvykz98hvj30c70c8jsm.jpg"><link rel="canonical" href="http://yechanggui.github.io/2023/12/15/linux/%E9%98%BF%E9%87%8C%E4%BA%91%20oss/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '阿里云 oss',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-12-15 18:31:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxvykz98hvj30c70c8jsm.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">76</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Vincent Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">阿里云 oss</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-15T10:31:00.000Z" title="发表于 2023-12-15 18:31:00">2023-12-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-15T10:31:00.000Z" title="更新于 2023-12-15 18:31:00">2023-12-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">9</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="阿里云 oss"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="406db84ada75fe7a759a1ed74fa8e5988c8d865bc2ca6208fad8c5994be60a7b">a8896663a075a62411bb5095d4322c69af92f13515555639f3f9f4aceff81e91d4d3f46c93b3b6ad89fbe12cead883b2b8833d57ccdae29692146042f39db0d2c295d0b1d28b34a9683d97041626c789ca723876a56ac8bc01e41485a2815d31d58d2c0e7d85f9ca63b957cd4d9202d341041a2fe2b8261aef7df5fb8c1415c5d4e1e91058e8588586077d5a1d8cd7fdbb64fc1ca199708676477d48ceff9d4ab4bd6f788cfaa7f2c512818854193657491ea897f9a8455c235b06be9b3afeae37527ed2326dee4f82143c60402f31e241f7efc870e045f0360ca3cfd661929a4b0f49faa0ae70ddc9bf6852c1533fe4976463356099f259d923c63b6eaefeec9cab060ab84a737cdfb0ae62c49f2d70e4c9021228cb386579d4deac38e6ed96c2057cbdb47141ec8144b74090737b6dd3133d33f55a91287e816f8ce9ff2729f64f2d06dfe4b68493853c7bf5727b7a687d8f94c5cec0983a2954902a2c7f5e4e48d822cf018346b69b6d16789db98e1e34d086bde285fc481e57687f5a63a946c215a38ab9000ad60b7683cac40b450dfab704bb41f3398ee9b6100bad871945f36f8f0f0351d4f5e38c2f14134515637b12adfd6a53911f128a944dbe8edb8409874a20c40986c6780fad9c65d4f912425fe33a9e930cc1267fcde50e2bbeac16bb8e674dc78822477967662cf12e57f87d0ffa35b92731426489d0ff2c5500e00e09c63ef833d5401bea559a92134fe9bb830fde583f8b99906d4e6044d16b474d076b21a72c71083527f4d4d6f96ca16622acd0c33bd1dbee87600c31126823d0fabb1d8b436ed5c358c0233e309a4bad278d951067fd597c2bb58fa7b1f5607d49f8a4c80d089f4ff96d9b6e336c64c48031bc71fa065ca49bda1aa6020a1ee23a0690bb6983879ce9ce784cecef6f77adf5139b64fde18765fd16735ab20b513935e4fd8d8ffd1ce91c0b4f3db61a5f880e16ecf638eecfc366a5de3b1d47f22af968441440824994911f47a134446bf047c20914c88a7c5e8d159f32f18aa2bd9a2e061a74633d0ac1ea2100b8578be7fd75e4dc2b8f659950ff71134a6f0f8773175e653b28e6be6da9ca2c489a56d4bf74b06206d0623f5f10e4c34be99d0f46785c218acd548d8817e96cfc80248e5a7462085a28e548a2ca58fd3e999d66a2d092415af35d3f004bbf467ad19814274d1c409eebbd788d800717015c20558b61db76a297d49a344c26f143dec0d03fff4aa94f36ec2e0f4bd70eca1bf7de15ba3fd45bcc1c2aa8d1f22b0adfb3c0cd68791706d2e89152763bd3f5b7397fa95b331a198a30cd99640d7487a4de4ab066bb0a9d7e0f32edbe446939edbf6f1d1cee85aa020ae436c3f1296523f15df552de1cbb2386b31f16bd4b17defe513ce8f07a3bf6a4886503ee23011d6347b14e1cdc835ac5ee03da35f8a4128491dfc55f64e9144d6459beffb10c00202e63302a3eb607852f1fa7815ca138152f58e7a196a1edde82944c8415a1f4140c94a95cb2aab067a734ee44c68a2aaa278eead720c95cc7ca052d2f228c3056327b5bc3d35c06cc52483dd4992e5cf726dc95e0266b16fea3e9fb10ccdbba0f82e7a8509c016decb6d4d39b525c7a79aef7c839841b0c0b4ff600e66365be8c6f4f4f647c8c3e0c05d5cdb58fa2df4a5ff2666284a828271c4f84318878da890de8ca7de3ddc72097ad2d51e1e4b68fc10f61ad425bd62d521250f6d16dad76f74ad53142bef243df58006c32cc22f84cd0de355cd63dce026a8dc6c360ebc679e63b76ad8fb10a29a97b0901f808bbd962ad0b181a71228c89141d06cccc649aeee7f7cb11594311566d70a1b16f660f6fd5e9c762683944ab5212d79783b63d1d9391d3dd29bd0e03c8acc9e1613626f275fd4d0c91bf075b36252e07b431870526c2b318e0741ba2ac4b82beb53d98c52af4ef4a331dfaccba1aeffd56e08df54010b80c6e855b1f256f0dc1b8cbb551540aa39f485326c57c8c3234f66886383cf4a8b45e98112d57d4b194792df999a1ae775000f0e2ab4ce0f1763b6bbabcc985f9119d8263a40b8e7d78227cac39193652ff6fa6ebe8a08dc574f4d02931733f94b1026155784c9ea6b986beb31e944b1ad827e3df2822634270347a85f5a0cbf652a5b62d503a75975cd35d903e900b91ea074ef47803218675bc681c8a85e6bc26cbfe8725b3e1f83e62d22a22c7ca5ce4fd25b841baa684d00a26be94e683d993443526dab0cd5af8bd1bd41c7e60746fc5491b1cb843dda39b6cb379b4d80b7b240440c18249718b8f7a4eeb9a6bda3516c7fb729b337c940060223fb87b39195a83644f7a830d43b295d3a9889adad0b50eeab349dc8cde3f304cc397c8b4bf6f2ff94c63add8b7df39d69e843d5537defce6f840468f3fbc68064e8efe212b1bd43e73d25be001954e748988811600cb5a41459f0b473d8313f8fa4d225418fee406a6a042feba6c464a0b76171cecd9f496e9e7198d59153290a4dd4b85f0593515289924deccbf0d69d14af169a4d41a4963b961face85377961ee051c80d0698d27e4cdacde7c8a32b5d11fd9de25d3c8793cda52e9eac55b016b0adef029f5adadaa17043cddad3cd20da43cb178218870a6e3236bb45566b64fe1ceffc2df16078bc74c9aabfdade3aee64c1900c75b579ec929383d87f74d3460968adaa8688e5f7276c8d43c8ae7a61abd1441983a14a4367bfd0325e2a21c9948a1c37f20588cd2632ef24ae836cde20087b79f106fc967e6221c5351cb6251e6ede4daad0820f26d8c8733622a2776b3016443455d30ed1e87d7ab93d8d99c0706b2b12e84db8ff208bbdcad39d2c73dffc1f9a265e43c69976d9fab47aedcf21741fbe6fed4287fb7170fa5a58ddcf7e14bcbf7bdc64c2a95c184becce02b13e2b4361829e7ae13106b0cba900f8db286ab8589e145e7d0fb6c199fef5743901fe04bbf541b6c023170db7fdc06153c94e8757d7d84e70468c2131ec15d1a481cca5f73fea4ebc95e23daf520c5bb5a3829846f3acd041001184259a07a52e11581aab21aa3a7436d6585009a14edd5237620211d05b17cdc291d188635c562246ca235cfdf5f8873f8599eb1fb49ddd6490affec18b638aa07d65246bda1431580f62465e66d9ade1f23c266008f4994bfea47293810fdc08dbd864d7b5b15a7033753c7cce37b593e25432dffa07dbebed28eec35a1143013328527942bf1a298fde0b59400d134d1e19e7a2237c3d69f1c153810cb0d5a8909535792d41373b63b456f73737bf46c27acaa3191ed3d62fa5638a611abd474eb88f647f0f26e453e63b8b95ce798ba20938f784e2125363103049e372fc236c1e5d02b98c5b1f5b98f25032054b3fa69a95a1118e8c6b8fb5d89c138891fefa17505f953dfbbaeb14bcac1d6dc09adec667e807f9e3aba5dadd304b14579c5e8ace252223e1cf823cfa56322d40093d9340908a0acdd0807863eaa700d815592ce652577a7cce536c1ce2925eff47a42dd4273b4f968f23269b522ffba</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-wave">
+      <input class="hbe hbe-input-field hbe-input-field-wave" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-wave" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-wave">您好, 这里需要密码.</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-wave" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css"></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Vincent</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yechanggui.github.io/2023/12/15/linux/%E9%98%BF%E9%87%8C%E4%BA%91%20oss/">http://yechanggui.github.io/2023/12/15/linux/%E9%98%BF%E9%87%8C%E4%BA%91%20oss/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yechanggui.github.io" target="_blank">Vincent Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E4%BD%9C/">工作</a><a class="post-meta__tags" href="/tags/linux/">linux</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/01/07/python/python%20%E9%A3%8E%E6%A0%BC%E6%A3%80%E6%9F%A5/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">python 风格检查</div></div></a></div><div class="next-post pull-right"><a href="/2023/11/28/kubernetes/%E5%B8%B8%E7%94%A8yaml/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">常用yaml</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/10/04/linux/linux%20%E6%8C%82%E8%BD%BD%E7%BD%91%E7%9B%98/" title="linux"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-04</div><div class="title">linux</div></div></a></div><div><a href="/2022/04/30/docker/docker-swarm-nfs/" title="docker-swarm-nfs"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-30</div><div class="title">docker-swarm-nfs</div></div></a></div><div><a href="/2021/12/16/kubernetes/%E9%85%8D%E7%BD%AE%E7%A7%81%E6%9C%89%E5%8C%96%E4%BB%93%E5%BA%93/" title="配置私有化仓库"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-16</div><div class="title">配置私有化仓库</div></div></a></div><div><a href="/2023/07/15/python/python%20fs/" title="python fs"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-15</div><div class="title">python fs</div></div></a></div><div><a href="/2021/12/16/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/SFTP/" title="SFTP"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-16</div><div class="title">SFTP</div></div></a></div><div><a href="/2021/12/16/%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7/nfs/" title="nfs"><img class="cover" src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-16</div><div class="title">nfs</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxvykz98hvj30c70c8jsm.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Vincent</div><div class="author-info__description">只有坚强起来才能不丧失温柔</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">76</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yechanggui"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/yechanggui" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content toc-div-class" style="display:none"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-ossfs"><span class="toc-number">1.</span> <span class="toc-text">Install ossfs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-ossutl"><span class="toc-number">2.</span> <span class="toc-text">Install ossutl</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#juicefuse"><span class="toc-number"></span> <span class="toc-text">juicefuse</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#API"><span class="toc-number">1.</span> <span class="toc-text">API</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number"></span> <span class="toc-text">Reference</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/02/14/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%A8%A1%E5%9E%8B%E5%8A%A0%E9%80%9F%E4%B8%8B%E8%BD%BD/" title="无题"><img src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/02/14/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%A8%A1%E5%9E%8B%E5%8A%A0%E9%80%9F%E4%B8%8B%E8%BD%BD/" title="无题">无题</a><time datetime="2025-02-14T03:48:52.660Z" title="发表于 2025-02-14 11:48:52">2025-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/14/%E9%87%8F%E5%8C%96/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" title="无题"><img src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/02/14/%E9%87%8F%E5%8C%96/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" title="无题">无题</a><time datetime="2025-02-14T03:48:52.660Z" title="发表于 2025-02-14 11:48:52">2025-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/14/%E6%95%B0%E6%8D%AE%E5%BA%93/Elasticsearch/ES%20%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" title="无题"><img src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/02/14/%E6%95%B0%E6%8D%AE%E5%BA%93/Elasticsearch/ES%20%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" title="无题">无题</a><time datetime="2025-02-14T03:48:52.660Z" title="发表于 2025-02-14 11:48:52">2025-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/14/python/%E6%9C%AA%E5%91%BD%E5%90%8D/" title="无题"><img src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/02/14/python/%E6%9C%AA%E5%91%BD%E5%90%8D/" title="无题">无题</a><time datetime="2025-02-14T03:48:52.659Z" title="发表于 2025-02-14 11:48:52">2025-02-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/14/python/%E6%9C%AA%E5%91%BD%E5%90%8D%201/" title="无题"><img src="https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2025/02/14/python/%E6%9C%AA%E5%91%BD%E5%90%8D%201/" title="无题">无题</a><time datetime="2025-02-14T03:48:52.659Z" title="发表于 2025-02-14 11:48:52">2025-02-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By Vincent</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
